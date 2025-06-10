@@ -1,28 +1,26 @@
-import streamlit as st 
-import pandas as pd 
-import os
+import streamlit as st
+import pandas as pd
 
-st.markdown("""
-    <style>
-    .big-font {
-        font-size:75px !important;
-        color:white;
-        text-align: center;
-        font-family: 'Roboto', Monospace; 
-    }
-    </style>
-    <div class="big-font">VN JEWELLERS<div>
-    """, unsafe_allow_html=True)
+def show_earrings():
+    st.title("Earring Collection")
+# Load your CSV and clean it up a bit...
+df = pd.read_csv("data.csv", delimiter="\t", encoding ="utf-16")
+df["Category"] = df["Category"].str.strip().str.title()
 
-st.header("EARRING COLLECTION")
+"""
+for row in df:
+    if (df["Category"] == "Earring").any():
+        st.image(f"images/{row['Image']}", width=200)
+        st.write(f"Weight: {row['Weight']}")
+        st.write(f"Purity: {row['Purity']}")
+        st.write(f"ID: {row['UID']}")
+        st.markdown("---")
+"""
 
 
-def display_images(folder):
-    image_files = os.listdir(folder)
-    cols = st.columns(3)
-    for idx, image in enumerate(image_files):
-        with cols[idx % 3]:
-            st.image(os.path.join(folder, image), use_container_width=True)
-
-# --- Display earring images ---
-display_images("images/er")
+for _, row in df.iterrows():
+    st.image(f"images/{row['ImagePath']}", width=200)
+    st.write(f"Weight: {row['Weight']}")
+    st.write(f"Purity: {row['Purity']}")
+    st.write(f"ID: {row['UID']}")
+    st.markdown("---")
