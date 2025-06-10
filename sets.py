@@ -1,3 +1,5 @@
+
+"""
 import streamlit as st
 import pandas as pd
 
@@ -17,3 +19,5 @@ for _, row in set_df.iterrows():
     st.write(f"Purity: {row['Purity']}")
     st.write(f"ID: {row['UID']}")
     st.markdown("---")
+    
+    """

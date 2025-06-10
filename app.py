@@ -1,25 +1,62 @@
 import streamlit as st
-from earring import show_earrings
-from sets import show_sets
 
-# Initialize session state
-if "page" not in st.session_state:
-    st.session_state.page = "home"
+import pandas as pd
 
-# Navigation buttons (only if no page selected or back on home)
-if st.session_state.page == "home":
-    st.markdown("<h1 style='text-align:center;'>VN JEWELLERS</h1>", unsafe_allow_html=True)
 
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("Earrings"):
-            st.session_state.page = "earring"
-    with col2:
-        if st.button("Set"):
-            st.session_state.page = "set"
+df = pd.read_csv("data.csv", delimiter="\t", encoding ="utf-16")
+df["Category"] = df["Category"].str.strip().str.title()
 
-# Page Routing
-if st.session_state.page == "earring":
-    show_earrings()
-elif st.session_state.page == "set":
-    show_sets()
+earring_df = df[df["Category"] == "Earring"]
+set_df = df[df["Category"] == "Set"]
+brace_df = df[df["Category"]== "Bracelet"]
+
+def ear_page():
+    st.title("Earring Collection")
+    for _, row in earring_df.iterrows():
+        st.image(row['ImagePath'], width=400)
+        st.write(f"Weight: {row['Weight']}")
+        st.write(f"Purity: {row['Purity']}")
+        st.write(f"ID: {row['UID']}")
+        st.markdown("---")
+
+
+def set_page():
+        st.title("Set Collection")
+        for _, row in set_df.iterrows():
+            st.image(row['ImagePath'], width=400)
+            st.write(f"Weight: {row['Weight']}")
+            st.write(f"Purity: {row['Purity']}")
+            st.write(f"ID: {row['UID']}")
+            st.markdown("---")
+
+
+def br_page():
+        st.title("Bracelet Collection")
+        for _, row in brace_df.iterrows():
+            st.image(row['ImagePath'], width=200)
+            st.write(f"Weight: {row['Weight']}")
+            st.write(f"Purity: {row['Purity']}")
+            st.write(f"ID: {row['UID']}")
+            st.markdown("---")
+
+
+
+
+
+
+
+
+st.sidebar.title("Inventory")
+
+opt = st.sidebar.selectbox(
+    "Choose a product", ["Earrings", "Sets", "Bracelets"]
+)
+
+if opt == "Earrings":
+    ear_page()
+    
+if opt == "Sets":
+    set_page()
+
+if opt == "Bracelets":
+    br_page()
