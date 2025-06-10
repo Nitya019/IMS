@@ -13,7 +13,7 @@ brace_df = df[df["Category"]== "Bracelet"]
 def ear_page():
     st.title("Earring Collection")
     for _, row in earring_df.iterrows():
-        st.image(row['ImagePath'], width=400)
+        st.image(row['Image'], width=400)
         st.write(f"Weight: {row['Weight']}")
         st.write(f"Purity: {row['Purity']}")
         st.write(f"ID: {row['UID']}")
@@ -23,7 +23,7 @@ def ear_page():
 def set_page():
         st.title("Set Collection")
         for _, row in set_df.iterrows():
-            st.image(row['ImagePath'], width=400)
+            st.image(row['Image'], width=400)
             st.write(f"Weight: {row['Weight']}")
             st.write(f"Purity: {row['Purity']}")
             st.write(f"ID: {row['UID']}")
@@ -33,7 +33,7 @@ def set_page():
 def br_page():
         st.title("Bracelet Collection")
         for _, row in brace_df.iterrows():
-            st.image(row['ImagePath'], width=200)
+            st.image(row['Image'], width=200)
             st.write(f"Weight: {row['Weight']}")
             st.write(f"Purity: {row['Purity']}")
             st.write(f"ID: {row['UID']}")
