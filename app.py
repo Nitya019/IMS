@@ -1,6 +1,7 @@
 import streamlit as st
 from earring import show_earrings
-from set import show_sets  # if you have a "Set" section
+from set import show_sets  
+
 
 # Initialize session state
 if "page" not in st.session_state:

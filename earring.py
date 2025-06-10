@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 
@@ -15,12 +16,12 @@ for row in df:
         st.write(f"Purity: {row['Purity']}")
         st.write(f"ID: {row['UID']}")
         st.markdown("---")
-"""
 
+"""
 
 for _, row in df.iterrows():
     st.image(f"images/{row['ImagePath']}", width=200)
     st.write(f"Weight: {row['Weight']}")
     st.write(f"Purity: {row['Purity']}")
     st.write(f"ID: {row['UID']}")
-    st.markdown("---")
+    st.markdown("---")"""
