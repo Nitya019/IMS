@@ -20,8 +20,8 @@ for row in df:
 """
 
 for _, row in df.iterrows():
-    st.image(f"images/{row['ImagePath']}", width=200)
+    st.image(row['ImagePath'], width=200)
     st.write(f"Weight: {row['Weight']}")
     st.write(f"Purity: {row['Purity']}")
     st.write(f"ID: {row['UID']}")
-    st.markdown("---")"""
+    st.markdown("---")  
