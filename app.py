@@ -5,10 +5,20 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 
+#----------authentication-----------------------------------#
 
-with open('/config.yaml') as file:
+hashed_passwords = stauth.Hasher(passwords=['abc']).generate()
+print(hashed_passwords)
+
+with open('config.yaml') as file:
     config = yaml.load(file, Loader= SafeLoader)
-
+authenticator = Authenticate(
+    config['credentials'],
+    "cookie_name",
+    "cookie_key",
+    cookie_expiry_days=1,
+    preauthorized=config['preauthorized']
+)
 #------------cleaning the data a bit-----------------------#
 df = pd.read_csv("data.csv", delimiter="\t", encoding ="utf-16")
 df["Category"] = df["Category"].str.strip().str.title()
