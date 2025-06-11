@@ -9,11 +9,13 @@ df["Category"] = df["Category"].str.strip().str.title()
 earring_df = df[df["Category"] == "Earring"]
 set_df = df[df["Category"] == "Set"]
 brace_df = df[df["Category"]== "Bracelet"]
+ms_df = df[df["Category"] == "Mangalsutra"]
+
 
 def ear_page():
     st.title("Earring Collection")
     for _, row in earring_df.iterrows():
-        st.image(row['Image'], width=400)
+        st.image(row['Image'], width=200)
         st.write(f"Weight: {row['Weight']}")
         st.write(f"Purity: {row['Purity']}")
         st.write(f"ID: {row['UID']}")
@@ -23,7 +25,7 @@ def ear_page():
 def set_page():
         st.title("Set Collection")
         for _, row in set_df.iterrows():
-            st.image(row['Image'], width=400)
+            st.image(row['Image'], width=200)
             st.write(f"Weight: {row['Weight']}")
             st.write(f"Purity: {row['Purity']}")
             st.write(f"ID: {row['UID']}")
@@ -40,7 +42,14 @@ def br_page():
             st.markdown("---")
 
 
-
+def ms_page():
+    st.title("Mangalsutra Collection")
+    for _, row in ms_df.iterrows():
+        st.image(row['Image'], width=200)
+        st.write(f"Weight: {row['Weight']}")
+        st.write(f"Purity: {row['Purity']}")
+        st.write(f"ID: {row['UID']}")
+        st.markdown("---")
 
 
 
@@ -49,7 +58,7 @@ def br_page():
 st.sidebar.title("Inventory")
 
 opt = st.sidebar.selectbox(
-    "Choose a product", ["Earrings", "Sets", "Bracelets"]
+    "Choose a product", ["Earrings", "Sets", "Bracelets", "Mangalsutra"]
 )
 
 if opt == "Earrings":
@@ -60,3 +69,10 @@ if opt == "Sets":
 
 if opt == "Bracelets":
     br_page()
+
+if opt == "Mangalsutra":
+    ms_page()
+    
+
+opt2 = st.sidebar.selectbox("Choose an option", ["Add", "Delete", "Update"])
+
