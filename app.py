@@ -2,6 +2,8 @@
 import streamlit as st
 import pandas as pd
 
+
+
 #------------cleaning the data a bit-----------------------#
 df = pd.read_csv("data.csv", delimiter="\t", encoding ="utf-16")
 df["Category"] = df["Category"].str.strip().str.title()
