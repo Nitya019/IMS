@@ -1,10 +1,12 @@
+#-----------importing modules-------------------------------#
 import streamlit as st
-
 import pandas as pd
 
-
+#------------cleaning the data a bit-----------------------#
 df = pd.read_csv("data.csv", delimiter="\t", encoding ="utf-16")
 df["Category"] = df["Category"].str.strip().str.title()
+
+#------------extracting data--------------------------------#
 
 earring_df = df[df["Category"] == "Earring"]
 set_df = df[df["Category"] == "Set"]
@@ -12,6 +14,7 @@ brace_df = df[df["Category"]== "Bracelet"]
 ms_df = df[df["Category"] == "Mangalsutra"]
 
 
+#-------------functions for each product----------------------#
 def ear_page():
     st.title("Earring Collection")
     for _, row in earring_df.iterrows():
@@ -54,7 +57,7 @@ def ms_page():
 
 
 
-
+#----------------adding the sidebar-------------------------#
 st.sidebar.title("Inventory")
 
 opt = st.sidebar.selectbox(
