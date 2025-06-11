@@ -1,8 +1,13 @@
 #-----------importing modules-------------------------------#
 import streamlit as st
 import pandas as pd
+import streamlit_authenticator as stauth
+import yaml
+from yaml.loader import SafeLoader
 
 
+with open('/config.yaml') as file:
+    config = yaml.load(file, Loader= SafeLoader)
 
 #------------cleaning the data a bit-----------------------#
 df = pd.read_csv("data.csv", delimiter="\t", encoding ="utf-16")
