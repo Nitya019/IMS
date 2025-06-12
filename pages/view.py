@@ -25,10 +25,10 @@ def ear_page():
     """, unsafe_allow_html=True)
 
     item_count = 0
-    cols = st.columns([1, 0.3, 1, 0.3, 1])  # wider gaps: 0.3 spacing columns
+    cols = st.columns([1, 0.3, 1, 0.3, 1])  
 
     for _, row in earring_df.iterrows():
-        col_index = item_count % 3 * 2  # Use 0, 2, 4 for real columns
+        col_index = item_count % 3 * 2 
 
         with cols[col_index]:
             st.image(row['Image'], use_container_width =True)
@@ -43,8 +43,8 @@ def ear_page():
         item_count += 1
 
         if item_count % 3 == 0:
-            st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)  # more vertical gap
-            cols = st.columns([1, 0.3, 1, 0.3, 1])  # reset with same wider spacing
+            st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True) 
+            cols = st.columns([1, 0.3, 1, 0.3, 1])  
 
 
 def set_page():
@@ -54,10 +54,10 @@ def set_page():
     """, unsafe_allow_html=True)
 
     item_count = 0
-    cols = st.columns([1, 0.3, 1, 0.3, 1])  # wider gaps: 0.3 spacing columns
+    cols = st.columns([1, 0.3, 1, 0.3, 1]) 
 
     for _, row in set_df.iterrows():
-        col_index = item_count % 3 * 2  # Use 0, 2, 4 for real columns
+        col_index = item_count % 3 * 2  
 
         with cols[col_index]:
             st.image(row['Image'], use_container_width =True)
@@ -72,8 +72,8 @@ def set_page():
         item_count += 1
 
         if item_count % 3 == 0:
-            st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)  # more vertical gap
-            cols = st.columns([1, 0.3, 1, 0.3, 1])  # reset with same wider spacing
+            st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)  
+            cols = st.columns([1, 0.3, 1, 0.3, 1])  
 
 def br_page():
     st.markdown("""
@@ -82,10 +82,10 @@ def br_page():
     """, unsafe_allow_html=True)
 
     item_count = 0
-    cols = st.columns([1, 0.3, 1, 0.3, 1])  # wider gaps: 0.3 spacing columns
+    cols = st.columns([1, 0.3, 1, 0.3, 1])  
 
     for _, row in brace_df.iterrows():
-        col_index = item_count % 3 * 2  # Use 0, 2, 4 for real columns
+        col_index = item_count % 3 * 2  
 
         with cols[col_index]:
             st.image(row['Image'], width= 200 )
@@ -100,8 +100,8 @@ def br_page():
         item_count += 1
 
         if item_count % 3 == 0:
-            st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)  # more vertical gap
-            cols = st.columns([1, 0.3, 1, 0.3, 1])  # reset with same wider spacing
+            st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True) 
+            cols = st.columns([1, 0.3, 1, 0.3, 1]) 
 
 def ms_page():
     st.markdown("""
@@ -110,10 +110,10 @@ def ms_page():
     """, unsafe_allow_html=True)
 
     item_count = 0
-    cols = st.columns([1, 0.3, 1, 0.3, 1])  # wider gaps: 0.3 spacing columns
+    cols = st.columns([1, 0.3, 1, 0.3, 1]) 
 
     for _, row in ms_df.iterrows():
-        col_index = item_count % 3 * 2  # Use 0, 2, 4 for real columns
+        col_index = item_count % 3 * 2  
 
         with cols[col_index]:
             st.image(row['Image'], width= 200 )
@@ -128,8 +128,8 @@ def ms_page():
         item_count += 1
 
         if item_count % 3 == 0:
-            st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)  # more vertical gap
-            cols = st.columns([1, 0.3, 1, 0.3, 1])  # reset with same wider spacing
+            st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)  
+            cols = st.columns([1, 0.3, 1, 0.3, 1]) 
 
 
 
