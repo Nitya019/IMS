@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 
 
 #------------cleaning the data a bit-----------------------#
-df = pd.read_csv("data.csv", delimiter="\t", encoding ="utf-16")
+df = pd.read_csv("data.csv", delimiter="\t", encoding ="utf-8")
 df["Category"] = df["Category"].str.strip().str.title()
 
 #------------extracting data--------------------------------#
