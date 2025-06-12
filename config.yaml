@@ -3,7 +3,7 @@ credentials:
     admin:
       name: Admin
       email: admin@gmail.com
-      password: abc
+      password: abc 
 
 cookie:
   expiry_days: 30
@@ -12,4 +12,4 @@ cookie:
 
 preauthorized:
   emails:
-    -admin@gmail.com
+    admin@gmail.com
