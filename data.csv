@@ -1,29 +1,30 @@
-uid,Category,Metal,Purity,Weight,Image
-S01,Set,gold,18k,0,images/SET/set1.png
-S02,Set,gold,18k,0,images/SET/set2.png
-S03,Set,gold,18k,0,images/SET/set3.png
-S05,Set,gold,18k,0,images/SET/set5.png
-S06,Set,gold,18k,0,images/SET/set6.png
-E01,Earring ,gold,18k,0,images/ER/E1.png
-E02,Earring ,gold,18k,0,images/ER/E2.png
-E03,Earring ,gold,18k,0,images/ER/E3.png
-E04,Earring ,gold,18k,0,images/ER/E4.png
-E05,Earring ,gold,18k,0,images/ER/E5.png
-E06,Earring ,gold,18k,0,images/ER/E6.png
-E07,Earring ,gold,18k,0,images/ER/E7.png
-MS01,Mangalsutra,gold,18k,0,images/MS/ms01.png
-MS02,Mangalsutra,gold,18k,0,images/MS/ms02.png
-MS03,Mangalsutra,gold,18K,0,images/MS/ms03.png
-MS04,Mangalsutra,gold,18k,0,images/MS/ms04.png
-BR01,Bracelet,gold,18k,0,images/BR/B01.png
-BR02,Bracelet,gold,18k,0,images/BR/B02.png
-BR03,Bracelet,gold,18k,0,images/BR/B03.png
-BG01,Bangle,gold,18k,0,images/BG/BG01.png
-BG02,Bangle,gold,18k,0,images/BG/BG02.png
-BG03,Bangle,gold,18k,0,images/BG/BG03.png
-BG04,Bangle,gold,18k,0,images/BG/BG04.png
-BG05,Bangle,gold,18k,0,images/BG/BG05.png
-BG06,Bangle,gold,18k,0,images/BG/BG06.png
-BG07,Bangle,gold,18k,0,images/BG/BG07.png
-TK01,Tika,gold,18k,0,images/TK/TK01.png
-P01,Pendant,gold,18k,0,images/PD/P01.png
+uid	Category	Subcategory	Metal	Purity	Weight	Image
+S01	Set		gold	18k		images/SET/set1.png
+S02	Set		gold	18k		images/SET/set2.png
+S03	Set		gold	18k		images/SET/set3.png
+S04	Set		gold	18k		images/SET/set4.png
+S05	Set		gold	18k		images/SET/set5.png
+S06	Set		gold	18k		images/SET/set6.png
+E01	Earring 	Jhaala	gold	18k		images/ER/E1.png
+E02	Earring 		gold	18k		images/ER/E2.png
+E03	Earring 		gold	18k		images/ER/E3.png
+E04	Earring 		gold	18k		images/ER/E4.png
+E05	Earring 		gold	18k		images/ER/E5.png
+E06	Earring 		gold	18k		images/ER/E6.png
+E07	Earring 		gold	18k		images/ER/E7.png
+MS01	Mangalsutra		gold	18k		images/MS/ms01.png
+MS02	Mangalsutra		gold	18k		images/MS/ms02.png
+MS03	Mangalsutra		gold	18K		images/MS/ms03.png
+MS04	Mangalsutra		gold	18k		images/MS/ms04.png
+BR01	Bracelet		gold	18k		images/BR/B01.png
+BR02	Bracelet		gold	18k		images/BR/B02.png
+BR03	Bracelet		gold	18k		images/BR/B03.png
+BG01	Bangle		gold	18k		images/BG/BG01.png
+BG02	Bangle		gold	18k		images/BG/BG02.png
+BG03	Bangle		gold	18k		images/BG/BG03.png
+BG04	Bangle		gold	18k		images/BG/BG04.png
+BG05	Bangle		gold	18k		images/BG/BG05.png
+BG06	Bangle		gold	18k		images/BG/BG06.png
+BG07	Bangle		gold	18k		images/BG/BG07.png
+TK01	Tika		gold	18k		images/TK/TK01.png
+P01	Pendant		gold	18k		images/PD/P01.png

@@ -4,9 +4,7 @@ import pandas as pd
 import os
 
 #-------------load the database---------------------------#
-df = pd.read_csv("data.csv", delimiter="\t", encoding ="utf-8")
-
-
+df = pd.read_csv("data.csv", delimiter= '\t', encoding='utf-8')
 
 # temporary credentials
 user_name = "admin"
@@ -56,7 +54,7 @@ if st.session_state.logged_in:
         }])
     
         df = pd.concat([df, new_data], ignore_index= True)
-        df.to_csv("data.csv", index =False)
+        df.to_csv("data.xlsx", index =False)
         st.success(f"{Category} added successfully! ")
 
 

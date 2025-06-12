@@ -38,7 +38,7 @@ def ear_page():
                 <div style="font-family:serif; font-size:20px; line-height:1.6; margin-top:10px;">
                     <strong>Weight:</strong> {row['Weight']}<br>
                     <strong>Purity:</strong> {row['Purity']}<br>
-                    <strong>ID:</strong> {row['UID']}
+                    <strong>ID:</strong> {row['uid']}
                 </div>
             """, unsafe_allow_html=True)
 
@@ -67,7 +67,7 @@ def set_page():
                 <div style="font-family:serif; font-size:20px; line-height:1.6; margin-top:10px;">
                     <strong>Weight:</strong> {row['Weight']}<br>
                     <strong>Purity:</strong> {row['Purity']}<br>
-                    <strong>ID:</strong> {row['UID']}
+                    <strong>ID:</strong> {row['uid']}
                 </div>
             """, unsafe_allow_html=True)
 
@@ -95,7 +95,7 @@ def br_page():
                 <div style="font-family:serif; font-size:20px; line-height:1.6; margin-top:10px;">
                     <strong>Weight:</strong> {row['Weight']}<br>
                     <strong>Purity:</strong> {row['Purity']}<br>
-                    <strong>ID:</strong> {row['UID']}
+                    <strong>ID:</strong> {row['uid']}
                 </div>
             """, unsafe_allow_html=True)
 
@@ -123,7 +123,7 @@ def ms_page():
                 <div style="font-family:serif; font-size:20px; line-height:1.6; margin-top:10px;">
                     <strong>Weight:</strong> {row['Weight']}<br>
                     <strong>Purity:</strong> {row['Purity']}<br>
-                    <strong>ID:</strong> {row['UID']}
+                    <strong>ID:</strong> {row['uid']}
                 </div>
             """, unsafe_allow_html=True)
 
@@ -151,7 +151,7 @@ def bg_page():
                 <div style="font-family:serif; font-size:20px; line-height:1.6; margin-top:10px;">
                     <strong>Weight:</strong> {row['Weight']}<br>
                     <strong>Purity:</strong> {row['Purity']}<br>
-                    <strong>ID:</strong> {row['UID']}
+                    <strong>ID:</strong> {row['uid']}
                 </div>
             """, unsafe_allow_html=True)
 
@@ -160,6 +160,7 @@ def bg_page():
         if item_count % 3 == 0:
             st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True) 
             cols = st.columns([1, 0.3, 1, 0.3, 1])  
+
 
 def tk_page():
     st.markdown("""
@@ -179,7 +180,7 @@ def tk_page():
                 <div style="font-family:serif; font-size:20px; line-height:1.6; margin-top:10px;">
                     <strong>Weight:</strong> {row['Weight']}<br>
                     <strong>Purity:</strong> {row['Purity']}<br>
-                    <strong>ID:</strong> {row['UID']}
+                    <strong>ID:</strong> {row['uid']}
                 </div>
             """, unsafe_allow_html=True)
 
@@ -207,7 +208,7 @@ def pd_page():
                 <div style="font-family:serif; font-size:20px; line-height:1.6; margin-top:10px;">
                     <strong>Weight:</strong> {row['Weight']}<br>
                     <strong>Purity:</strong> {row['Purity']}<br>
-                    <strong>ID:</strong> {row['UID']}
+                    <strong>ID:</strong> {row['uid']}
                 </div>
             """, unsafe_allow_html=True)
 
@@ -216,7 +217,6 @@ def pd_page():
         if item_count % 3 == 0:
             st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True) 
             cols = st.columns([1, 0.3, 1, 0.3, 1])  
-
 
 
 #----------------adding the sidebar-------------------------#
