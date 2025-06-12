@@ -1,5 +1,7 @@
 import streamlit as st
 
+import pandas as pd
+
 
 # temporary credentials
 user_name = "admin"
@@ -13,6 +15,18 @@ if "logged_in" not in st.session_state:
 def login():
     st.title("Admin Login")
     username = st.text_input("Username")
-    password = st.text_input("Password")
+    password = st.text_input("Password", type = "password")
     if st.button("Login"):
-        if username == USERN
+        if username == user_name and password == pass_word:
+            st.session_state.logged_in = True
+            st.balloons()
+        else:
+            st.error("Invalid credentials")
+            
+            
+
+
+if st.session_state.logged_in:
+    pass
+else:
+    login()
