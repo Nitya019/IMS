@@ -46,7 +46,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-col1, col2, col3 = st.columns([1, 2.2, 1])  # Adjust column widths for centering
+col1, col2, col3 = st.columns([1, 2.2, 1])  # AdjustX    column widths for centering
 with col2:
     st.image("images\S1.webp",width=600 )
 
