@@ -1,0 +1,8 @@
+[theme]
+base = "dark"
+primaryColor = "#d4af37"  # Classic gold
+backgroundColor = "#121212"  # Deep black
+secondaryBackgroundColor = "#1e1e1e"  # Slightly lighter for sidebar/cards
+textColor = "#ffffff"  # Clean white text
+font = "serif"  # Premium look
+    
