@@ -54,7 +54,7 @@ if st.session_state.logged_in:
         }])
     
         df = pd.concat([df, new_data], ignore_index= True)
-        df.to_csv("data.xlsx", index =False)
+        df.to_csv("data.csv", index =False)
         st.success(f"{Category} added successfully! ")
 
 
