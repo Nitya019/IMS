@@ -51,7 +51,7 @@ with col2:
     st.image("images/S1.png",width=600 )
 
 if st.button("Go to Catalogue"):
-    st.switch_page("pages/View.py")
+    st.switch_page("pages/view.py")
 st.markdown("""<div style='text-align: center; font-size:18px; color: #e6cc99;'>
         <strong>📍 VN Jewellers, Adonia Breeze Complex, Munshipulia Chauraha, Panigaon, Lucknow</strong><br>
         📞 +91 9918402555 &nbsp;&nbsp;&nbsp;&nbsp; 📞 +91 6393799551<br>
