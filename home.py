@@ -55,7 +55,6 @@ if st.button("Go to Catalogue"):
 st.markdown("""<div style='text-align: center; font-size:18px; color: #e6cc99;'>
         <strong>📍 VN Jewellers, Adonia Breeze Complex, Munshipulia Chauraha, Panigaon, Lucknow</strong><br>
         📞 +91 9918402555 &nbsp;&nbsp;&nbsp;&nbsp; 📞 +91 6393799551<br>
-        📧 vnjewellers@example.com
     <br><br>
     <div style='text-align: left;'>
     </div>
