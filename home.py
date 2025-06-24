@@ -48,7 +48,7 @@ st.markdown("""
 
 col1, col2, col3 = st.columns([1, 2.2, 1])  # AdjustX    column widths for centering
 with col2:
-    st.image("images\S1.webp",width=600 )
+    st.image("images\S1.png",width=600 )
 
 if st.button("Go to Catalogue"):
     st.switch_page("pages/View.py")
